@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Champions Comparer</string>
+    <string name="hint_search">Type champion\'s name or title to filter</string>
+    <string name="back">Back</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="overview">Visão Geral</string>
+    <string name="skills">Habilidades</string>
+    <string name="stats">Atributos</string>
+    <string name="compare">Comparar</string>
+    <string name="hint_select_champion_to_compare">Selecione um campeão para comparar</string>
+</resources>

@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <ImageView
+        android:id="@+id/row_champion_spell_image_image_view"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/champion_not_found" />
+
+    <TextView
+        android:id="@+id/row_champion_spell_name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/row_champion_spell_image_image_view"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/row_champion_spell_cost_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/row_champion_spell_name_text_view"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/row_champion_spell_image_image_view"
+        android:text="Mana Cost" />
+
+    <TextView
+        android:id="@+id/row_champion_spell_cooldown_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/row_champion_spell_cost_text_view"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/row_champion_spell_image_image_view"
+        android:text="Cooldown" />
+
+    <TextView
+        android:id="@+id/row_champion_spell_description_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/row_champion_spell_image_image_view"
+        android:maxLines="4"
+        android:minLines="4"
+        android:text="Lore ipsum" />
+</RelativeLayout>
