@@ -16,7 +16,7 @@ public class ChampionDataSourceHelper {
 
         String aniviaLore = "Anivia is a benevolent winged spirit who endures endless cycles of life, death, and rebirth to protect the Freljord. A demigod born of unforgiving ice and bitter winds, she wields those elemental powers to thwart any who dare disturb her homeland. Anivia guides and protects the tribes of the harsh north, who revere her as a symbol of hope, and a portent of great change. She fights with every ounce of her being, knowing that through her sacrifice, her memory will endure, and she will be reborn into a new tomorrow.";
         Champion anivia = new Champion("Anivia", "the Cryophoenix", aniviaLore, "anivia",
-                new Champion.Info(1, 4, 10, 10),
+                new Champion.Info(1, 4, 10, 10, 6),
                 Arrays.asList(
                         new Champion.Passive("Rebirth", "Upon dying, Anivia will revert into an egg. If the egg can survive for six seconds, she is gloriously reborn.",
                                 "anivia_passive"),
@@ -40,7 +40,7 @@ public class ChampionDataSourceHelper {
 
         String luxLore = "Luxanna Crownguard hails from Demacia, an insular realm where magical abilities are viewed with fear and suspicion. Able to bend light to her will, she grew up dreading discovery and exile, and was forced to keep her power secret, in order to preserve her family's noble status. Nonetheless, Lux's optimism and resilience have led her to embrace her unique talents, and she now covertly wields them in service of her homeland.";
         Champion lux = new Champion("Lux", "the Lady of Luminosity", luxLore, "lux",
-                new Champion.Info(2, 4, 9, 5),
+                new Champion.Info(2, 4, 9, 5, 7),
                 Arrays.asList(
                         new Champion.Passive("Illumination", "Lux's damaging spells charge the target with energy for 6 seconds. Lux's next attack ignites the energy, dealing bonus magic damage (depending on Lux's level) to the target.",
                                 "lux_passive_illuminating_fraulein"),
@@ -64,7 +64,7 @@ public class ChampionDataSourceHelper {
 
         String nidaleeLore = "There are few dwellers, let alone champions, residing in the blasted and dangerous lands that lie south of the Great Barrier. Much of that world still bears the scars of past Runes Wars, especially the mysterious Kumungu Jungle. There are long-forgotten treasures in these strange places which many risk life and limb to acquire. Nidalee was only a young girl travelling with her treasure-seeking parents when they lost their way in the dense, rainy jungles. The jungle was unforgiving, and she watched her parents suffer agonizing final days as they fell victim to a mysterious and vicious disease.<br><br>As improbable as it was for a child to survive in the inhospitable jungle by herself, she did just that. Her youthful innocence and a fortunate naivete caused her to appeal to the beasts of that place and she was taken in by a family of cougars and raised as one of their own. She grew and somehow absorbed the raw magic of the dense wilds, evolving beyond both her human physiology and her feline affectation. Now a fierce, nigh-mythical protector,  Nidalee battles  viciously tooth and nail against any who would threaten the vast jungle she calls home.";
         Champion nidalee = new Champion("Nidalee", "the Bestial Huntress", nidaleeLore, "nidalee",
-                new Champion.Info(5, 4, 7, 8), Arrays.asList(
+                new Champion.Info(5, 4, 7, 8, 9), Arrays.asList(
                 new Champion.Passive("Prowl", "Moving through brush increases Nidalee's Movement Speed by 10% for 2 seconds, increased to 30% toward visible enemy champions within 1400 range.<br><br>Hitting champions or monsters with Javelin Toss or Bushwhack triggers a <font color='#FFF673'>Hunt</font>, granting <font color='#ee91d7'>True Sight</font> of them for 4 seconds. During this time, Nidalee gains 10% Movement Speed (increased to 30% toward the <font color='#FFF673'>Hunted</font> target) and her Takedown and Pounce are enhanced against them.",
                         "nidalee_passive"),
                 new Champion.Spell("Javelin Toss / Takedown", "50/60/70/80/90", "6",

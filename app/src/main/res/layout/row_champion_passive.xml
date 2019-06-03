@@ -1,7 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/row_champion_passive_image_image_view"
@@ -24,6 +23,5 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/row_champion_passive_image_image_view"
         android:maxLines="4"
-        android:minLines="4"
         android:text="Lore ipsum" />
 </RelativeLayout>

@@ -1,7 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:paddingTop="5dp"
     android:paddingBottom="5dp">
 
@@ -41,9 +40,9 @@
     <TextView
         android:id="@+id/row_champion_spell_description_text_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/row_champion_spell_image_image_view"
+        android:layout_alignParentBottom="true"
         android:maxLines="4"
-        android:minLines="4"
         android:text="Lore ipsum" />
 </RelativeLayout>

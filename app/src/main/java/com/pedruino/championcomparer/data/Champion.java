@@ -120,16 +120,18 @@ public class Champion implements Serializable {
     }
 
     public static final class Info implements Serializable {
+        private int mobility;
         private int attack;
         private int defense;
         private int magic;
         private int difficulty;
 
-        public Info(int attack, int defense, int magic, int difficulty) {
+        public Info(int attack, int defense, int magic, int difficulty, int mobility) {
             this.attack = attack;
             this.defense = defense;
             this.magic = magic;
             this.difficulty = difficulty;
+            this.mobility = mobility;
         }
 
         public int getAttack() {
@@ -149,7 +151,7 @@ public class Champion implements Serializable {
         }
 
         public int getMobility() {
-            return (int) 6;
+            return mobility;
         }
     }
 

@@ -84,10 +84,10 @@ public class ChampionAbilityAdapter extends RecyclerView.Adapter<ChampionAbility
         @Override
         public void fillChampionAbility(Champion.Spell ability) {
             this.nameTextView.setText(ability.getName());
-            this.costTextView.setText(ability.getCost());
-            this.cooldownTextView.setText(ability.getCooldown());
+            this.costTextView.setText(new StringBuilder().append(itemView.getResources().getString(R.string.mana_cost)).append(": ").append(ability.getCost()).toString());
+            this.cooldownTextView.setText(new StringBuilder().append(itemView.getResources().getString(R.string.cooldown)).append(": ").append(ability.getCooldown()).toString());
             this.descriptionTextView.setText(ability.getDescription());
-            this.descriptionTextView.setHint(ability.getTooltip());
+            //this.descriptionTextView.setHint(ability.getTooltip());
             this.imageImageView.setImageResource(ResourceHelper.findResourceIdByName(itemView, ability.getImage()));
         }
     }
