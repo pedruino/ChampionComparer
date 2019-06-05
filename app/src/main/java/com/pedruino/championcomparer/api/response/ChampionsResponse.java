@@ -14,7 +14,6 @@ public class ChampionsResponse {
     public ChampionsResponse() {
     }
 
-
     public String getVersion() {
         return version;
     }

@@ -1,7 +1,5 @@
 package com.pedruino.championcomparer.api.response;
 
-import android.media.Image;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
@@ -25,11 +23,23 @@ public class ChampionResponse {
     @JsonProperty("blurb")
     private String blurb;
 
+    @JsonProperty("lore")
+    private String lore;
+
+    @JsonProperty("allytips")
+    private List<String> allytips;
+
+    @JsonProperty("enemytips")
+    private List<String> enemytips;
+
     @JsonProperty("info")
     private InfoResponse info;
 
     @JsonProperty("image")
     private ImageResponse image;
+
+    @JsonProperty("skins")
+    private List<SkinResponse> skins;
 
     @JsonProperty("tags")
     private List<String> tags;
@@ -39,6 +49,12 @@ public class ChampionResponse {
 
     @JsonProperty("stats")
     private StatsResponse stats;
+
+    @JsonProperty("spells")
+    private List<SpellResponse> spells;
+
+    @JsonProperty("passive")
+    private PassiveResponse passive;
 
     public ChampionResponse() {
     }
@@ -129,5 +145,53 @@ public class ChampionResponse {
 
     public void setStats(StatsResponse stats) {
         this.stats = stats;
+    }
+
+    public String getLore() {
+        return lore;
+    }
+
+    public void setLore(String lore) {
+        this.lore = lore;
+    }
+
+    public List<String> getAllytips() {
+        return allytips;
+    }
+
+    public void setAllytips(List<String> allytips) {
+        this.allytips = allytips;
+    }
+
+    public List<String> getEnemytips() {
+        return enemytips;
+    }
+
+    public void setEnemytips(List<String> enemytips) {
+        this.enemytips = enemytips;
+    }
+
+    public List<SpellResponse> getSpells() {
+        return spells;
+    }
+
+    public void setSpells(List<SpellResponse> spells) {
+        this.spells = spells;
+    }
+
+    public PassiveResponse getPassive() {
+        return passive;
+    }
+
+    public void setPassive(PassiveResponse passive) {
+        this.passive = passive;
+    }
+
+    public List<SkinResponse> getSkins() {
+        return skins;
+    }
+
+    public void setSkins(List<SkinResponse> skins) {
+        this.skins = skins;
     }
 }

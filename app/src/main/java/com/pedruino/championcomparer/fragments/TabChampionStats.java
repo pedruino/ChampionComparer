@@ -30,9 +30,9 @@ import java.util.List;
 public class TabChampionStats extends Fragment {
     private Champion champion;
     private RadarChart championInfoRadarChart;
-    private Spinner championSpinner;
     private List<Champion> champions;
     private ArrayList<IRadarDataSet> dataSets;
+    private Spinner championSpinner;
 
     public static TabChampionStats newInstance(Champion champion, ArrayList<Champion> champions) {
         TabChampionStats fragment = new TabChampionStats();
@@ -50,7 +50,9 @@ public class TabChampionStats extends Fragment {
             this.champion = (Champion) getArguments().getSerializable(ChampionInfoActivity.PARAM_CHAMPION);
 
             this.champions = (List<Champion>) getArguments().getSerializable(ChampionInfoActivity.PARAM_CHAMPIONS);
-            this.champions.remove(this.champion);
+            if (this.champions != null) {
+                this.champions.remove(this.champion);
+            }
 
             this.dataSets = new ArrayList<>();
         }
@@ -62,8 +64,6 @@ public class TabChampionStats extends Fragment {
 
         this.championSpinner = fragmentView.findViewById(R.id.fragment_champion_stats_champion_spinner);
         this.championSpinner.setAdapter(new ArrayAdapter<>(fragmentView.getContext(), android.R.layout.simple_spinner_dropdown_item, this.champions));
-
-
         this.championSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
@@ -86,7 +86,7 @@ public class TabChampionStats extends Fragment {
             }
         });
 
-        this.championSpinner.setEnabled(false);
+        championSpinner.setEnabled(false);
 
         this.championInfoRadarChart = fragmentView.findViewById(R.id.fragment_champion_stats_info_radar_chart);
         this.championInfoRadarChart.getDescription().setEnabled(false);
@@ -116,7 +116,13 @@ public class TabChampionStats extends Fragment {
         xAxis.setXOffset(0f);
         xAxis.setValueFormatter(new ValueFormatter() {
 
-            private final String[] attributes = new String[]{"Attack", "Defense", "Magic", "Difficulty", "Mobility"};
+            private final String[] attributes = new String[]{
+                    getString(R.string.attack),
+                    getString(R.string.defense),
+                    getString(R.string.magic),
+                    getString(R.string.difficulty),
+                    getString(R.string.mobility)
+            };
 
             @Override
             public String getFormattedValue(float value) {
@@ -143,7 +149,7 @@ public class TabChampionStats extends Fragment {
         l.setYEntrySpace(5f);
         l.setTextColor(Color.DKGRAY);
 
-        this.championSpinner.setEnabled(true);
+        championSpinner.setEnabled(true);
         return fragmentView;
     }
 

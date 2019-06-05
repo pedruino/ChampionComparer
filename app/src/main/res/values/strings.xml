@@ -4,14 +4,20 @@
     <string name="back">Back</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="overview">Visão Geral</string>
-    <string name="skills">Habilidades</string>
-    <string name="stats">Atributos</string>
-    <string name="compare">Comparar</string>
-    <string name="hint_select_champion_to_compare">Selecione um campeão para comparar</string>
-    <string name="mana_cost">Cost</string>
-    <string name="cooldown">Cooldown</string>
+    <string name="overview">Overview</string>
+    <string name="skills">Abilities</string>
+    <string name="stats">Attributes</string>
+    <string name="compare">Compare</string>
+    <string name="mana_cost">Cost: %s</string>
+    <string name="cooldown">Cooldown: %s</string>
     <string name="wait">Wait</string>
     <string name="loading">Loading...</string>
+    <string name="toast_total_loaded_items">Total loaded items: %d</string>
+    <string name="attack">Attack</string>
+    <string name="defense">Defense</string>
+    <string name="magic">Magic</string>
+    <string name="difficulty">Difficulty</string>
+    <string name="mobility">Mobility</string>
+    <string name="hint_select_champion_to_compare">Select a champion to compare</string>
+    <string name="toast_error_loading">An error has occurred on loading</string>
 </resources>

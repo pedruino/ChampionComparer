@@ -4,50 +4,49 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class InfoResponse {
     @JsonProperty("attack")
-    private long attack;
+    private int attack;
 
     @JsonProperty("defense")
-    private long defense;
+    private int defense;
 
     @JsonProperty("magic")
-    private long magic;
+    private int magic;
 
     @JsonProperty("difficulty")
-    private long difficulty;
+    private int difficulty;
 
     public InfoResponse() {
-
     }
 
-    public long getAttack() {
+    public int getAttack() {
         return attack;
     }
 
-    public void setAttack(long attack) {
+    public void setAttack(int attack) {
         this.attack = attack;
     }
 
-    public long getDefense() {
+    public int getDefense() {
         return defense;
     }
 
-    public void setDefense(long defense) {
+    public void setDefense(int defense) {
         this.defense = defense;
     }
 
-    public long getMagic() {
+    public int getMagic() {
         return magic;
     }
 
-    public void setMagic(long magic) {
+    public void setMagic(int magic) {
         this.magic = magic;
     }
 
-    public long getDifficulty() {
+    public int getDifficulty() {
         return difficulty;
     }
 
-    public void setDifficulty(long difficulty) {
+    public void setDifficulty(int difficulty) {
         this.difficulty = difficulty;
     }
 }

@@ -10,13 +10,13 @@ import android.widget.TextView;
 
 import com.pedruino.championcomparer.R;
 import com.pedruino.championcomparer.data.Champion;
-import com.pedruino.championcomparer.utils.ResourceHelper;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 public class ChampionAbilityAdapter extends RecyclerView.Adapter<ChampionAbilityAdapter.ChampionAbilityViewHolder> {
-    public static final int VIEW_TYPE_PASSIVE = 1;
-    public static final int VIEW_TYPE_SPELL = 2;
+    private static final int VIEW_TYPE_PASSIVE = 1;
+    private static final int VIEW_TYPE_SPELL = 2;
     private List<Champion.Ability> dataSource;
 
     public ChampionAbilityAdapter(List<Champion.Ability> dataSource) {
@@ -58,7 +58,7 @@ public class ChampionAbilityAdapter extends RecyclerView.Adapter<ChampionAbility
 
     public static abstract class ChampionAbilityViewHolder<Tability extends Champion.Ability> extends RecyclerView.ViewHolder {
 
-        public ChampionAbilityViewHolder(@NonNull View itemView) {
+        ChampionAbilityViewHolder(@NonNull View itemView) {
             super(itemView);
         }
 
@@ -72,7 +72,7 @@ public class ChampionAbilityAdapter extends RecyclerView.Adapter<ChampionAbility
         private TextView descriptionTextView;
         private ImageView imageImageView;
 
-        public ChampionSpellViewHolder(@NonNull View itemView) {
+        ChampionSpellViewHolder(@NonNull View itemView) {
             super(itemView);
             this.nameTextView = itemView.findViewById(R.id.row_champion_spell_name_text_view);
             this.costTextView = itemView.findViewById(R.id.row_champion_spell_cost_text_view);
@@ -84,11 +84,10 @@ public class ChampionAbilityAdapter extends RecyclerView.Adapter<ChampionAbility
         @Override
         public void fillChampionAbility(Champion.Spell ability) {
             this.nameTextView.setText(ability.getName());
-            this.costTextView.setText(new StringBuilder().append(itemView.getResources().getString(R.string.mana_cost)).append(": ").append(ability.getCost()).toString());
-            this.cooldownTextView.setText(new StringBuilder().append(itemView.getResources().getString(R.string.cooldown)).append(": ").append(ability.getCooldown()).toString());
+            this.costTextView.setText(itemView.getResources().getString(R.string.mana_cost, ability.getCost()));
+            this.cooldownTextView.setText(itemView.getResources().getString(R.string.cooldown, ability.getCooldown()));
             this.descriptionTextView.setText(ability.getDescription());
-            //this.descriptionTextView.setHint(ability.getTooltip());
-            this.imageImageView.setImageResource(ResourceHelper.findResourceIdByName(itemView, ability.getImage()));
+            Picasso.with(this.imageImageView.getContext()).load(ability.getImagePath()).into(this.imageImageView);
         }
     }
 
@@ -97,7 +96,7 @@ public class ChampionAbilityAdapter extends RecyclerView.Adapter<ChampionAbility
         private TextView descriptionTextView;
         private ImageView imageImageView;
 
-        public ChampionPassiveViewHolder(@NonNull View itemView) {
+        ChampionPassiveViewHolder(@NonNull View itemView) {
             super(itemView);
             this.nameTextView = itemView.findViewById(R.id.row_champion_passive_name_text_view);
             this.descriptionTextView = itemView.findViewById(R.id.row_champion_passive_description_text_view);
@@ -108,7 +107,7 @@ public class ChampionAbilityAdapter extends RecyclerView.Adapter<ChampionAbility
         public void fillChampionAbility(Champion.Passive ability) {
             this.nameTextView.setText(ability.getName());
             this.descriptionTextView.setText(ability.getDescription());
-            this.imageImageView.setImageResource(ResourceHelper.findResourceIdByName(itemView, ability.getImage()));
+            Picasso.with(this.imageImageView.getContext()).load(ability.getImagePath()).into(this.imageImageView);
         }
     }
 }

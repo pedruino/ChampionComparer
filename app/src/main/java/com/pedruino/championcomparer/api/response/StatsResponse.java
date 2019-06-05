@@ -4,22 +4,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class StatsResponse {
     @JsonProperty("hp")
-    private long hp;
+    private int hp;
 
     @JsonProperty("hpperlevel")
-    private long hpperlevel;
+    private int hpperlevel;
 
     @JsonProperty("mp")
-    private long mp;
+    private int mp;
 
     @JsonProperty("mpperlevel")
-    private long mpperlevel;
+    private int mpperlevel;
 
     @JsonProperty("movespeed")
-    private long movespeed;
+    private int movespeed;
 
     @JsonProperty("armor")
-    private long armor;
+    private int armor;
 
     @JsonProperty("armorperlevel")
     private double armorperlevel;
@@ -31,31 +31,31 @@ public class StatsResponse {
     private double spellblockperlevel;
 
     @JsonProperty("attackrange")
-    private long attackrange;
+    private int attackrange;
 
     @JsonProperty("hpregen")
-    private long hpregen;
+    private int hpregen;
 
     @JsonProperty("hpregenperlevel")
     private double hpregenperlevel;
 
     @JsonProperty("mpregen")
-    private long mpregen;
+    private int mpregen;
 
     @JsonProperty("mpregenperlevel")
-    private long mpregenperlevel;
+    private int mpregenperlevel;
 
     @JsonProperty("crit")
-    private long crit;
+    private int crit;
 
     @JsonProperty("critperlevel")
-    private long critperlevel;
+    private int critperlevel;
 
     @JsonProperty("attackdamage")
-    private long attackdamage;
+    private int attackdamage;
 
     @JsonProperty("attackdamageperlevel")
-    private long attackdamageperlevel;
+    private int attackdamageperlevel;
 
     @JsonProperty("attackspeedperlevel")
     private double attackspeedperlevel;
@@ -66,51 +66,51 @@ public class StatsResponse {
     public StatsResponse() {
     }
 
-    public long getHp() {
+    public int getHp() {
         return hp;
     }
 
-    public void setHp(long hp) {
+    public void setHp(int hp) {
         this.hp = hp;
     }
 
-    public long getHpperlevel() {
+    public int getHpperlevel() {
         return hpperlevel;
     }
 
-    public void setHpperlevel(long hpperlevel) {
+    public void setHpperlevel(int hpperlevel) {
         this.hpperlevel = hpperlevel;
     }
 
-    public long getMp() {
+    public int getMp() {
         return mp;
     }
 
-    public void setMp(long mp) {
+    public void setMp(int mp) {
         this.mp = mp;
     }
 
-    public long getMpperlevel() {
+    public int getMpperlevel() {
         return mpperlevel;
     }
 
-    public void setMpperlevel(long mpperlevel) {
+    public void setMpperlevel(int mpperlevel) {
         this.mpperlevel = mpperlevel;
     }
 
-    public long getMovespeed() {
+    public int getMovespeed() {
         return movespeed;
     }
 
-    public void setMovespeed(long movespeed) {
+    public void setMovespeed(int movespeed) {
         this.movespeed = movespeed;
     }
 
-    public long getArmor() {
+    public int getArmor() {
         return armor;
     }
 
-    public void setArmor(long armor) {
+    public void setArmor(int armor) {
         this.armor = armor;
     }
 
@@ -138,19 +138,19 @@ public class StatsResponse {
         this.spellblockperlevel = spellblockperlevel;
     }
 
-    public long getAttackrange() {
+    public int getAttackrange() {
         return attackrange;
     }
 
-    public void setAttackrange(long attackrange) {
+    public void setAttackrange(int attackrange) {
         this.attackrange = attackrange;
     }
 
-    public long getHpregen() {
+    public int getHpregen() {
         return hpregen;
     }
 
-    public void setHpregen(long hpregen) {
+    public void setHpregen(int hpregen) {
         this.hpregen = hpregen;
     }
 
@@ -162,51 +162,51 @@ public class StatsResponse {
         this.hpregenperlevel = hpregenperlevel;
     }
 
-    public long getMpregen() {
+    public int getMpregen() {
         return mpregen;
     }
 
-    public void setMpregen(long mpregen) {
+    public void setMpregen(int mpregen) {
         this.mpregen = mpregen;
     }
 
-    public long getMpregenperlevel() {
+    public int getMpregenperlevel() {
         return mpregenperlevel;
     }
 
-    public void setMpregenperlevel(long mpregenperlevel) {
+    public void setMpregenperlevel(int mpregenperlevel) {
         this.mpregenperlevel = mpregenperlevel;
     }
 
-    public long getCrit() {
+    public int getCrit() {
         return crit;
     }
 
-    public void setCrit(long crit) {
+    public void setCrit(int crit) {
         this.crit = crit;
     }
 
-    public long getCritperlevel() {
+    public int getCritperlevel() {
         return critperlevel;
     }
 
-    public void setCritperlevel(long critperlevel) {
+    public void setCritperlevel(int critperlevel) {
         this.critperlevel = critperlevel;
     }
 
-    public long getAttackdamage() {
+    public int getAttackdamage() {
         return attackdamage;
     }
 
-    public void setAttackdamage(long attackdamage) {
+    public void setAttackdamage(int attackdamage) {
         this.attackdamage = attackdamage;
     }
 
-    public long getAttackdamageperlevel() {
+    public int getAttackdamageperlevel() {
         return attackdamageperlevel;
     }
 
-    public void setAttackdamageperlevel(long attackdamageperlevel) {
+    public void setAttackdamageperlevel(int attackdamageperlevel) {
         this.attackdamageperlevel = attackdamageperlevel;
     }
 

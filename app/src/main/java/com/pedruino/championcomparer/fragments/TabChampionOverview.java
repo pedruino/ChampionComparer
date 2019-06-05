@@ -11,12 +11,13 @@ import android.widget.BaseAdapter;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.appl.library.CoverFlowCarousel;
 import com.pedruino.championcomparer.ChampionInfoActivity;
 import com.pedruino.championcomparer.R;
 import com.pedruino.championcomparer.data.Champion;
-import com.pedruino.championcomparer.utils.ResourceHelper;
+import com.squareup.picasso.Picasso;
 
 
 public class TabChampionOverview extends Fragment {
@@ -56,12 +57,12 @@ public class TabChampionOverview extends Fragment {
             this.loreTextView.setText(this.champion.getLore());
 
             int totalSkins = this.champion.getSkins().size();
-            int[] resourceIds = new int[totalSkins];
+            String[] resourceUris = new String[totalSkins];
             for (int i = 0; i < totalSkins; i++) {
-                resourceIds[i] = ResourceHelper.findResourceIdByName(fragmentView, this.champion.getSkins().get(i).getName());
+                resourceUris[i] = this.champion.getSkins().get(i).getImagePath();
             }
 
-            final TabChampionOverview.CarouselAdapter adapter = new TabChampionOverview.CarouselAdapter(resourceIds);
+            final TabChampionOverview.CarouselAdapter adapter = new TabChampionOverview.CarouselAdapter(resourceUris);
             this.skinsCoverFlowCarousel = fragmentView.findViewById(R.id.fragment_champion_overview_skins_cover_flow_carousel);
             this.skinsCoverFlowCarousel.setAdapter(adapter);
             this.skinsCoverFlowCarousel.setSelection(adapter.getCount() / 2);
@@ -76,20 +77,20 @@ public class TabChampionOverview extends Fragment {
 
 
     private class CarouselAdapter extends BaseAdapter {
-        private int[] mResourceIds;
+        private String[] resourceUris;
 
-        private CarouselAdapter(int[] mResourceIds) {
-            this.mResourceIds = mResourceIds;
+        private CarouselAdapter(String[] resourceUris) {
+            this.resourceUris = resourceUris;
         }
 
         @Override
         public int getCount() {
-            return mResourceIds.length;
+            return resourceUris.length;
         }
 
         @Override
         public Object getItem(int position) {
-            return mResourceIds[position % mResourceIds.length];
+            return resourceUris[position % resourceUris.length];
         }
 
         @Override
@@ -106,12 +107,12 @@ public class TabChampionOverview extends Fragment {
                 v = (TabChampionOverview.SkinFrameLayout) convertView;
             }
 
-            v.setImageResource(mResourceIds[position]);
+            v.setImageResource(resourceUris[position]);
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     skinsCoverFlowCarousel.scrollToItemPosition(position);
-                    //Toast.makeText(ChampionInfoActivity.this, "clicked position:" + position, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(v.getContext(), champion.getSkins().get(position).getName(), Toast.LENGTH_SHORT).show();
                 }
             });
 
@@ -120,18 +121,18 @@ public class TabChampionOverview extends Fragment {
     }
 
     private static class SkinFrameLayout extends FrameLayout {
-        private ImageView mImageView;
+        private ImageView imageView;
 
-        public void setImageResource(int resId) {
-            mImageView.setImageResource(resId);
+        public void setImageResource(String resId) {
+            Picasso.with(this.imageView.getContext()).load(resId).into(this.imageView);
         }
 
         public SkinFrameLayout(Context context) {
             super(context);
 
-            mImageView = new ImageView(context);
-            mImageView.setScaleType(ImageView.ScaleType.FIT_XY);
-            addView(mImageView);
+            this.imageView = new ImageView(context);
+            this.imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+            this.addView(this.imageView);
 
             setBackgroundColor(Color.WHITE);
             setSelected(false);
@@ -142,9 +143,9 @@ public class TabChampionOverview extends Fragment {
             super.setSelected(selected);
 
             if (selected) {
-                mImageView.setAlpha(1.0f);
+                this.imageView.setAlpha(1.0f);
             } else {
-                mImageView.setAlpha(0.5f);
+                this.imageView.setAlpha(0.5f);
             }
         }
     }

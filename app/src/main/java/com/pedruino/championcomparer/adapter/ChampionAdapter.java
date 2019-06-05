@@ -8,19 +8,18 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.pedruino.championcomparer.api.ApiClient;
-import com.pedruino.championcomparer.api.response.ChampionResponse;
 import com.pedruino.championcomparer.R;
+import com.pedruino.championcomparer.data.Champion;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 
 public class ChampionAdapter extends RecyclerView.Adapter<ChampionAdapter.ChampionViewHolder> {
-    private List<ChampionResponse> dataSource;
+    private List<Champion> dataSource;
     private OnChampionClickListener onChampionClickListener;
 
-    public ChampionAdapter(List<ChampionResponse> dataSource, OnChampionClickListener onChampionClickListener) {
+    public ChampionAdapter(List<Champion> dataSource, OnChampionClickListener onChampionClickListener) {
         this.dataSource = dataSource;
         this.onChampionClickListener = onChampionClickListener;
     }
@@ -58,13 +57,12 @@ public class ChampionAdapter extends RecyclerView.Adapter<ChampionAdapter.Champi
             this.itemView.setOnClickListener(this);
         }
 
-        private void fillChampion(ChampionResponse champion) {
+        private void fillChampion(Champion champion) {
             this.nameTextView.setText(champion.getName());
             this.titleTextView.setText(champion.getTitle());
             this.thumbImageView.setImageDrawable(null);
-            StringBuilder sb = new StringBuilder(ApiClient.BASE_URL_IMAGE).append(champion.getImage().getFull());
-            Picasso.with(this.thumbImageView.getContext()).load(sb.toString()).into(this.thumbImageView);
-            //thumbImageView.setImageResource(ResourceHelper.findResourceIdByName(itemView, champion.getImage()));
+            Picasso.with(this.thumbImageView.getContext()).load(champion.getImagePath()).into(this.thumbImageView);
+            //thumbImageView.setImageResource(ResourceHelper.findResourceIdByName(itemView, champion.getImagePath()));
         }
 
         @Override

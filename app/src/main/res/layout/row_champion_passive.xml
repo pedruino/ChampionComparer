@@ -15,7 +15,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_toRightOf="@id/row_champion_passive_image_image_view"
-        android:text="Ability Name" />
+        android:text="Ability Name"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/row_champion_passive_description_text_view"
