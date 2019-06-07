@@ -11,7 +11,7 @@
     <com.appl.library.CoverFlowCarousel
         android:id="@+id/fragment_champion_overview_skins_cover_flow_carousel"
         android:layout_width="match_parent"
-        android:layout_height="200dp" />
+        android:layout_height="250dp" />
 
     <!-- Champion Name -->
     <TextView
@@ -19,7 +19,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="7dp"
-        android:text="Nidalee" />
+        android:text="Nidalee"
+        tools:ignore="HardcodedText" />
 
     <!-- Champion Title -->
     <TextView
@@ -27,7 +28,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="7dp"
-        android:text="the Bestial Huntress" />
+        android:text="the Bestial Huntress"
+        tools:ignore="HardcodedText" />
 
     <!-- Champion Lore -->
     <TextView
@@ -37,6 +39,7 @@
         android:maxLines="4"
         android:minLines="4"
         android:padding="7dp"
-        android:text="The champion's lore..." />
+        android:text="The champion's lore..."
+        tools:ignore="HardcodedText" />
 
 </LinearLayout>

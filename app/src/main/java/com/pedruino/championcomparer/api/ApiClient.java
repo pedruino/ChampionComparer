@@ -21,9 +21,9 @@ import retrofit2.converter.jackson.JacksonConverterFactory;
 
 public class ApiClient {
     public static final String BASE_URL = "http://ddragon.leagueoflegends.com/cdn/";
-    public static final String DEFAULT_LANGUAGE = "en_US";
     public static final String VERSION = "9.10.1";
     public static final String BASE_URL_IMAGE = String.format("%s%s/img/champion/", BASE_URL, VERSION);
+    private static final String DEFAULT_LANGUAGE = "en_US";
     private static ApiClient instance;
     private static List<String> supportedLocales;
     private Retrofit retrofit;
@@ -33,7 +33,6 @@ public class ApiClient {
     private ApiClient() {
         ObjectMapper mapper = new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 
-        HttpUrl httpUrl = HttpUrl.parse(BASE_URL);
         this.retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(JacksonConverterFactory.create(mapper))
@@ -42,7 +41,7 @@ public class ApiClient {
         this.localeService = retrofit.create(LocaleService.class);
         this.championService = retrofit.create(ChampionService.class);
 
-        this.supportedLocales = Collections.unmodifiableList(getSupportedLocales());
+        supportedLocales = Collections.unmodifiableList(getSupportedLocales());
     }
 
     private List<String> getSupportedLocales() {
