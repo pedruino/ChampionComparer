@@ -2,18 +2,15 @@ package com.pedruino.championcomparer.api;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.pedruino.championcomparer.api.response.ChampionsResponse;
 import com.pedruino.championcomparer.api.services.ChampionService;
 import com.pedruino.championcomparer.api.services.LocaleService;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
-import okhttp3.HttpUrl;
 import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.Retrofit;

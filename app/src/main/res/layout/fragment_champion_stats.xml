@@ -8,6 +8,11 @@
     tools:context=".fragments.TabChampionStats">
 
     <!-- Champion to compare -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_select_champion_to_compare"/>
+
     <Spinner
         android:id="@+id/fragment_champion_stats_champion_spinner"
         android:layout_width="match_parent"

@@ -1,9 +1,7 @@
 <resources>
-    <string name="app_name">Champions Comparer</string>
-    <string name="hint_search">Type champion\'s name or title to filter</string>
+    <string name="app_name" translatable="false">LoL Champion Wiki</string>
+    <string name="hint_search">Type champion\'s name to filter</string>
     <string name="back">Back</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="overview">Overview</string>
     <string name="skills">Abilities</string>
     <string name="stats">Attributes</string>
@@ -11,8 +9,8 @@
     <string name="mana_cost">Cost: %s</string>
     <string name="cooldown">Cooldown: %s</string>
     <string name="wait">Wait</string>
-    <string name="loading">Loading...</string>
-    <string name="toast_total_loaded_items">Total loaded items: %d</string>
+    <string name="loading">Loading…</string>
+    <string name="toast_total_loaded_champions">Total loaded champions: %d</string>
     <string name="attack">Attack</string>
     <string name="defense">Defense</string>
     <string name="magic">Magic</string>
@@ -20,4 +18,7 @@
     <string name="mobility">Mobility</string>
     <string name="hint_select_champion_to_compare">Select a champion to compare</string>
     <string name="toast_error_loading">An error has occurred on loading</string>
+    <string name="enemy_tips">Enemy tips</string>
+    <string name="ally_tips">Ally tips</string>
+    <string name="role">Role</string>
 </resources>

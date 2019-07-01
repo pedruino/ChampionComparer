@@ -1,10 +1,12 @@
 package com.pedruino.championcomparer.data;
 
+import android.support.annotation.NonNull;
+
 import com.pedruino.championcomparer.api.ApiClient;
-import com.pedruino.championcomparer.api.response.ChampionResponse;
-import com.pedruino.championcomparer.api.response.PassiveResponse;
-import com.pedruino.championcomparer.api.response.SkinResponse;
-import com.pedruino.championcomparer.api.response.SpellResponse;
+import com.pedruino.championcomparer.api.responses.ChampionResponse;
+import com.pedruino.championcomparer.api.responses.PassiveResponse;
+import com.pedruino.championcomparer.api.responses.SkinResponse;
+import com.pedruino.championcomparer.api.responses.SpellResponse;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -18,9 +20,11 @@ public class Champion implements Serializable {
     private Info info;
     private List<Skin> skins;
     private List<Ability> abilities;
+    private List<String> tags;
+    private List<String> allyTips;
+    private List<String> enemyTips;
 
-
-    public Champion(String name, String title, String lore, String image, Info info, List<Ability> abilities, List<Skin> skins) {
+    public Champion(String name, String title, String lore, String image, Info info, List<Ability> abilities, List<Skin> skins, List<String> tags, List<String> allyTips, List<String> enemyTips) {
         this.name = name;
         this.title = title;
         this.lore = lore;
@@ -28,6 +32,9 @@ public class Champion implements Serializable {
         this.info = info;
         this.abilities = abilities;
         this.skins = skins;
+        this.tags = tags;
+        this.allyTips = allyTips;
+        this.enemyTips = enemyTips;
     }
 
     public String getName() {
@@ -56,6 +63,18 @@ public class Champion implements Serializable {
 
     public List<Skin> getSkins() {
         return skins;
+    }
+
+    public List<String> getTags() {
+        return tags;
+    }
+
+    public List<String> getAllyTips() {
+        return allyTips;
+    }
+
+    public List<String> getEnemyTips() {
+        return enemyTips;
     }
 
     public static abstract class Ability implements Serializable {
@@ -120,7 +139,7 @@ public class Champion implements Serializable {
         private String num;
         private String imagePath;
 
-        public Skin(String id, String name, String num, String imagePath) {
+        Skin(String id, String name, String num, String imagePath) {
             this.id = id;
             this.name = name;
             this.num = num;
@@ -180,11 +199,16 @@ public class Champion implements Serializable {
         }
     }
 
+    /**
+     * @param obj the champion object to compare
+     * @return true if names are equals
+     */
     @Override
     public boolean equals(Object obj) {
         return this.getName().equals(((Champion) obj).getName());
     }
 
+    @NonNull
     @Override
     public String toString() {
         return this.getName();
@@ -263,7 +287,10 @@ public class Champion implements Serializable {
                     String.format("%s%s", this.baseUrlImage, this.championResponse.getImage().getFull()),
                     this.info,
                     this.abilities,
-                    this.skins);
+                    this.skins,
+                    this.championResponse.getTags(),
+                    this.championResponse.getAllytips(),
+                    this.championResponse.getEnemytips());
         }
     }
 }

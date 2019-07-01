@@ -1,6 +1,6 @@
 package com.pedruino.championcomparer.api.services;
 
-import com.pedruino.championcomparer.api.response.ChampionsResponse;
+import com.pedruino.championcomparer.api.responses.ChampionsResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

@@ -5,7 +5,7 @@ import android.support.annotation.StringRes;
 
 import com.pedruino.championcomparer.R;
 import com.pedruino.championcomparer.api.ApiClient;
-import com.pedruino.championcomparer.api.response.ChampionsResponse;
+import com.pedruino.championcomparer.api.responses.ChampionsResponse;
 import com.pedruino.championcomparer.api.services.ChampionService;
 
 import java.io.IOException;

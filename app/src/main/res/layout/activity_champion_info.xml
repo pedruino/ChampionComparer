@@ -8,6 +8,19 @@
     android:padding="7dp"
     tools:context=".ChampionInfoActivity">
 
+    <Toolbar
+        android:id="@+id/activity_champion_info_toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="NewApi">
+
+        <TextView
+            android:id="@+id/activity_champion_info_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold" />
+    </Toolbar>
+
     <android.support.design.widget.TabLayout
         android:id="@+id/activity_champion_info_tab_layout"
         android:layout_width="match_parent"

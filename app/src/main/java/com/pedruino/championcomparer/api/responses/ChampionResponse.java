@@ -1,4 +1,4 @@
-package com.pedruino.championcomparer.api.response;
+package com.pedruino.championcomparer.api.responses;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

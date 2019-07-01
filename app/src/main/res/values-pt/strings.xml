@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Comparador de Campeões</string>
     <string name="attack">Ataque</string>
     <string name="back">Voltar</string>
     <string name="compare">Comparar</string>
     <string name="cooldown">Resfriamento: %s</string>
     <string name="defense">Defesa</string>
     <string name="difficulty">Dificuldade</string>
-    <string name="hint_search">Digite o nome do campeão ou título para filtrar</string>
+    <string name="hint_search">Digite o nome do campeão para filtrar</string>
     <string name="hint_select_champion_to_compare">Selecione um campeão para comparar</string>
-    <string name="loading">Carregando...</string>
+    <string name="loading">Carregando…</string>
     <string name="magic">Magia</string>
     <string name="mana_cost">Custo: %s</string>
     <string name="mobility">Mobilidade</string>
@@ -17,6 +16,9 @@
     <string name="skills">Habilidades</string>
     <string name="stats">Atributos</string>
     <string name="toast_error_loading">Ocorreu um erro ao carregar</string>
-    <string name="toast_total_loaded_items">Total de itens carregados: %d</string>
+    <string name="toast_total_loaded_champions">Total de itens carregados: %d</string>
     <string name="wait">Aguarde</string>
+    <string name="enemy_tips">Jogando contra</string>
+    <string name="ally_tips">Jogando junto</string>
+    <string name="role">Papel</string>
 </resources>

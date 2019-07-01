@@ -24,6 +24,10 @@ public class ChampionAdapter extends RecyclerView.Adapter<ChampionAdapter.Champi
         this.onChampionClickListener = onChampionClickListener;
     }
 
+    public List<Champion> getDataSource() {
+        return this.dataSource;
+    }
+
     @NonNull
     @Override
     public ChampionViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
@@ -40,6 +44,11 @@ public class ChampionAdapter extends RecyclerView.Adapter<ChampionAdapter.Champi
     @Override
     public int getItemCount() {
         return this.dataSource.size();
+    }
+
+    public void updateDataSource(List<Champion> newDataSource) {
+        this.dataSource = newDataSource;
+        this.notifyDataSetChanged();
     }
 
     public final static class ChampionViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
