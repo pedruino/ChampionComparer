@@ -1,4 +1,4 @@
-package com.pedruino.championcomparer.fragments;
+package com.pedruino.lolchampionwiki.fragments;
 
 
 import android.os.Bundle;
@@ -9,10 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.pedruino.championcomparer.ChampionInfoActivity;
-import com.pedruino.championcomparer.R;
-import com.pedruino.championcomparer.adapter.ChampionAbilityAdapter;
-import com.pedruino.championcomparer.data.Champion;
+import com.pedruino.lolchampionwiki.ChampionInfoActivity;
+import com.pedruino.lolchampionwiki.R;
+import com.pedruino.lolchampionwiki.adapter.ChampionAbilityAdapter;
+import com.pedruino.lolchampionwiki.data.Champion;
 
 
 public class TabChampionAbilities extends Fragment {

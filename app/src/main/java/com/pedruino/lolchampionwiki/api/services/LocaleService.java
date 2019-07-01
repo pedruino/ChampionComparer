@@ -1,4 +1,4 @@
-package com.pedruino.championcomparer.api.services;
+package com.pedruino.lolchampionwiki.api.services;
 
 import java.util.List;
 

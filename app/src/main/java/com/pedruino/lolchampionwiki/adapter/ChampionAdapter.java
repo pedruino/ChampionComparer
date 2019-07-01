@@ -1,4 +1,4 @@
-package com.pedruino.championcomparer.adapter;
+package com.pedruino.lolchampionwiki.adapter;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.pedruino.championcomparer.R;
-import com.pedruino.championcomparer.data.Champion;
+import com.pedruino.lolchampionwiki.R;
+import com.pedruino.lolchampionwiki.data.Champion;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

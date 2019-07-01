@@ -1,9 +1,9 @@
-package com.pedruino.championcomparer.api;
+package com.pedruino.lolchampionwiki.api;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.pedruino.championcomparer.api.services.ChampionService;
-import com.pedruino.championcomparer.api.services.LocaleService;
+import com.pedruino.lolchampionwiki.api.services.ChampionService;
+import com.pedruino.lolchampionwiki.api.services.LocaleService;
 
 import java.io.IOException;
 import java.util.Arrays;

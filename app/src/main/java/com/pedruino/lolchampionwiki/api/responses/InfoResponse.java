@@ -1,4 +1,4 @@
-package com.pedruino.championcomparer.api.responses;
+package com.pedruino.lolchampionwiki.api.responses;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

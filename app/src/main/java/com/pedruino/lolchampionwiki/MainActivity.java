@@ -1,4 +1,4 @@
-package com.pedruino.championcomparer;
+package com.pedruino.lolchampionwiki;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -12,12 +12,12 @@ import android.view.View;
 import android.widget.SearchView;
 import android.widget.Toast;
 
-import com.pedruino.championcomparer.adapter.ChampionAdapter;
-import com.pedruino.championcomparer.api.ApiClient;
-import com.pedruino.championcomparer.api.responses.ChampionResponse;
-import com.pedruino.championcomparer.api.responses.ChampionsResponse;
-import com.pedruino.championcomparer.data.Champion;
-import com.pedruino.championcomparer.task.LoadAllChampionsTask;
+import com.pedruino.lolchampionwiki.adapter.ChampionAdapter;
+import com.pedruino.lolchampionwiki.api.ApiClient;
+import com.pedruino.lolchampionwiki.api.responses.ChampionResponse;
+import com.pedruino.lolchampionwiki.api.responses.ChampionsResponse;
+import com.pedruino.lolchampionwiki.data.Champion;
+import com.pedruino.lolchampionwiki.task.LoadAllChampionsTask;
 
 import java.io.Serializable;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.pedruino.championcomparer.fragments;
+package com.pedruino.lolchampionwiki.fragments;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -17,9 +17,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.appl.library.CoverFlowCarousel;
-import com.pedruino.championcomparer.ChampionInfoActivity;
-import com.pedruino.championcomparer.R;
-import com.pedruino.championcomparer.data.Champion;
+import com.pedruino.lolchampionwiki.ChampionInfoActivity;
+import com.pedruino.lolchampionwiki.R;
+import com.pedruino.lolchampionwiki.data.Champion;
 import com.squareup.picasso.Picasso;
 
 

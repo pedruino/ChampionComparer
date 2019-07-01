@@ -1,4 +1,4 @@
-package com.pedruino.championcomparer.fragments;
+package com.pedruino.lolchampionwiki.fragments;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -20,9 +20,9 @@ import com.github.mikephil.charting.data.RadarDataSet;
 import com.github.mikephil.charting.data.RadarEntry;
 import com.github.mikephil.charting.formatter.ValueFormatter;
 import com.github.mikephil.charting.interfaces.datasets.IRadarDataSet;
-import com.pedruino.championcomparer.ChampionInfoActivity;
-import com.pedruino.championcomparer.R;
-import com.pedruino.championcomparer.data.Champion;
+import com.pedruino.lolchampionwiki.ChampionInfoActivity;
+import com.pedruino.lolchampionwiki.R;
+import com.pedruino.lolchampionwiki.data.Champion;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.pedruino.championcomparer.adapter;
+package com.pedruino.lolchampionwiki.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

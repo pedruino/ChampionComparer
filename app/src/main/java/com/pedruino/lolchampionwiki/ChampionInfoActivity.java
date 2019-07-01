@@ -1,4 +1,4 @@
-package com.pedruino.championcomparer;
+package com.pedruino.lolchampionwiki;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -12,18 +12,18 @@ import android.view.View;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
-import com.pedruino.championcomparer.adapter.TabsAdapter;
-import com.pedruino.championcomparer.api.ApiClient;
-import com.pedruino.championcomparer.api.responses.ChampionsResponse;
-import com.pedruino.championcomparer.data.Champion;
-import com.pedruino.championcomparer.fragments.TabChampionOverview;
-import com.pedruino.championcomparer.fragments.TabChampionAbilities;
-import com.pedruino.championcomparer.fragments.TabChampionStats;
-import com.pedruino.championcomparer.task.LoadChampionTask;
+import com.pedruino.lolchampionwiki.adapter.TabsAdapter;
+import com.pedruino.lolchampionwiki.api.ApiClient;
+import com.pedruino.lolchampionwiki.api.responses.ChampionsResponse;
+import com.pedruino.lolchampionwiki.data.Champion;
+import com.pedruino.lolchampionwiki.fragments.TabChampionOverview;
+import com.pedruino.lolchampionwiki.fragments.TabChampionAbilities;
+import com.pedruino.lolchampionwiki.fragments.TabChampionStats;
+import com.pedruino.lolchampionwiki.task.LoadChampionTask;
 
 import java.util.ArrayList;
 
-import static com.pedruino.championcomparer.R.*;
+import static com.pedruino.lolchampionwiki.R.*;
 
 public class ChampionInfoActivity extends AppCompatActivity implements LoadChampionTask.LoadChampionsTaskDelegate {
     public static final String PARAM_CHAMPION = "champion";

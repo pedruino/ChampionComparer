@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.pedruino.championcomparer">
+    package="com.pedruino.lolchampionwiki">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -14,8 +14,8 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
 
-        <activity android:name=".ChampionInfoActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.pedruino.lolchampionwiki.ChampionInfoActivity" />
+        <activity android:name="com.pedruino.lolchampionwiki.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

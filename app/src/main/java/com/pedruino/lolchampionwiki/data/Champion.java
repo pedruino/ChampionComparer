@@ -1,12 +1,12 @@
-package com.pedruino.championcomparer.data;
+package com.pedruino.lolchampionwiki.data;
 
 import android.support.annotation.NonNull;
 
-import com.pedruino.championcomparer.api.ApiClient;
-import com.pedruino.championcomparer.api.responses.ChampionResponse;
-import com.pedruino.championcomparer.api.responses.PassiveResponse;
-import com.pedruino.championcomparer.api.responses.SkinResponse;
-import com.pedruino.championcomparer.api.responses.SpellResponse;
+import com.pedruino.lolchampionwiki.api.ApiClient;
+import com.pedruino.lolchampionwiki.api.responses.ChampionResponse;
+import com.pedruino.lolchampionwiki.api.responses.PassiveResponse;
+import com.pedruino.lolchampionwiki.api.responses.SkinResponse;
+import com.pedruino.lolchampionwiki.api.responses.SpellResponse;
 
 import java.io.Serializable;
 import java.util.ArrayList;

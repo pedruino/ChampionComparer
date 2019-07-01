@@ -1,12 +1,12 @@
-package com.pedruino.championcomparer.task;
+package com.pedruino.lolchampionwiki.task;
 
 import android.os.AsyncTask;
 import android.support.annotation.StringRes;
 
-import com.pedruino.championcomparer.R;
-import com.pedruino.championcomparer.api.ApiClient;
-import com.pedruino.championcomparer.api.responses.ChampionsResponse;
-import com.pedruino.championcomparer.api.services.ChampionService;
+import com.pedruino.lolchampionwiki.R;
+import com.pedruino.lolchampionwiki.api.ApiClient;
+import com.pedruino.lolchampionwiki.api.responses.ChampionsResponse;
+import com.pedruino.lolchampionwiki.api.services.ChampionService;
 
 import java.io.IOException;
 
