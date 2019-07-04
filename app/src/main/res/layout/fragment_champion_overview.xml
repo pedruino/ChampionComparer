@@ -17,6 +17,13 @@
             android:layout_width="match_parent"
             android:layout_height="250dp" />
 
+        <!-- Champion Skin Name -->
+        <TextView
+            android:id="@+id/fragment_champion_skin_name_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" />
+
         <!-- Champion Name -->
         <TextView
             android:id="@+id/fragment_champion_overview_name_text_view"

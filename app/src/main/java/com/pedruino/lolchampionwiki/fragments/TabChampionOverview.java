@@ -14,7 +14,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.appl.library.CoverFlowCarousel;
 import com.pedruino.lolchampionwiki.ChampionInfoActivity;
@@ -24,11 +23,11 @@ import com.squareup.picasso.Picasso;
 
 
 public class TabChampionOverview extends Fragment {
+    private CoverFlowCarousel skinsCoverFlowCarousel;
     private TextView nameTextView;
     private TextView titleTextView;
     private TextView loreTextView;
     private Champion champion;
-    CoverFlowCarousel skinsCoverFlowCarousel;
     private TextView tagsTextView;
     private ListView allyTipsListView;
     private ListView enemyTipsListView;
@@ -97,11 +96,47 @@ public class TabChampionOverview extends Fragment {
             this.skinsCoverFlowCarousel.setSpacing(0.5f);
             this.skinsCoverFlowCarousel.setRotationThreshold(0.3f);
             this.skinsCoverFlowCarousel.shouldRepeat(false);
+
+            setSkinName(fragmentView, adapter.getCount() / 2);
         }
 
         return fragmentView;
     }
 
+    private void setSkinName(View v, int position) {
+        TextView skinNameTextView = v.findViewById(R.id.fragment_champion_skin_name_text_view);
+        skinNameTextView.setText(champion.getSkins().get(position).getName());
+    }
+
+    private static class SkinFrameLayout extends FrameLayout {
+        private ImageView imageView;
+
+        public SkinFrameLayout(Context context) {
+            super(context);
+
+            this.imageView = new ImageView(context);
+            this.imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+            this.addView(this.imageView);
+
+            setBackgroundColor(Color.WHITE);
+            setSelected(false);
+        }
+
+        public void setImageResource(String resId) {
+            Picasso.with(this.imageView.getContext()).load(resId).into(this.imageView);
+        }
+
+        @Override
+        public void setSelected(boolean selected) {
+            super.setSelected(selected);
+
+            if (selected) {
+                this.imageView.setAlpha(1.0f);
+            } else {
+                this.imageView.setAlpha(0.5f);
+            }
+        }
+    }
 
     private class CarouselAdapter extends BaseAdapter {
         private String[] resourceUris;
@@ -126,7 +161,7 @@ public class TabChampionOverview extends Fragment {
         }
 
         @Override
-        public View getView(final int position, View convertView, ViewGroup parent) {
+        public View getView(final int position, final View convertView, ViewGroup parent) {
             TabChampionOverview.SkinFrameLayout v;
             if (convertView == null) {
                 v = new TabChampionOverview.SkinFrameLayout(TabChampionOverview.this.getContext());
@@ -139,41 +174,11 @@ public class TabChampionOverview extends Fragment {
                 @Override
                 public void onClick(View v) {
                     skinsCoverFlowCarousel.scrollToItemPosition(position);
-                    Toast.makeText(v.getContext(), champion.getSkins().get(position).getName(), Toast.LENGTH_SHORT).show();
+                    setSkinName(v.getRootView(), position);
                 }
             });
 
             return v;
-        }
-    }
-
-    private static class SkinFrameLayout extends FrameLayout {
-        private ImageView imageView;
-
-        public void setImageResource(String resId) {
-            Picasso.with(this.imageView.getContext()).load(resId).into(this.imageView);
-        }
-
-        public SkinFrameLayout(Context context) {
-            super(context);
-
-            this.imageView = new ImageView(context);
-            this.imageView.setScaleType(ImageView.ScaleType.FIT_XY);
-            this.addView(this.imageView);
-
-            setBackgroundColor(Color.WHITE);
-            setSelected(false);
-        }
-
-        @Override
-        public void setSelected(boolean selected) {
-            super.setSelected(selected);
-
-            if (selected) {
-                this.imageView.setAlpha(1.0f);
-            } else {
-                this.imageView.setAlpha(0.5f);
-            }
         }
     }
 }
