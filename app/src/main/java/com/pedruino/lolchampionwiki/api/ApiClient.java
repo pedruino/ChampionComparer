@@ -17,8 +17,8 @@ import retrofit2.Retrofit;
 import retrofit2.converter.jackson.JacksonConverterFactory;
 
 public class ApiClient {
-    public static final String BASE_URL = "http://ddragon.leagueoflegends.com/cdn/";
-    public static final String VERSION = "9.10.1";
+    public static final String BASE_URL = "https://ddragon.leagueoflegends.com/cdn/";
+    public static final String VERSION = "9.17.1";
     public static final String BASE_URL_IMAGE = String.format("%s%s/img/champion/", BASE_URL, VERSION);
     private static final String DEFAULT_LANGUAGE = "en_US";
     private static ApiClient instance;
